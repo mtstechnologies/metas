@@ -8,10 +8,12 @@ import { useState } from "react";
 
 function SalesCard() {
 
-    
+    const min = new Date(new Date().setDate(new Date().getDate() - 365));
+    const max = new Date();
+
     //forma de declaracao de estado dentro de um component REACT
-    const [minDate, setMinDate] = useState(new Date());
-    const [maxDate, setMaxDate] = useState(new Date());
+    const [minDate, setMinDate] = useState(min);
+    const [maxDate, setMaxDate] = useState(max);
 
 
     return (
