@@ -1,3 +1,7 @@
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
+
 import NotificationButton from '../NotificationButton';
 import './styles.css';
 
@@ -8,10 +12,22 @@ function SalesCard() {
             <h2 className="mtmeta-sales-title">Vendas</h2>
             <div>
                 <div className="mtmeta-form-control-container">
-                    <input className="mtmeta-form-control" type="text" />
+                    <DatePicker
+                        selected={new Date()}
+                        onChange={(date: Date) => { }}
+                        className="mtmeta-form-control"
+                        dateFormat="dd/MM/yyyy"
+                    />
+
                 </div>
                 <div className="mtmeta-form-control-container">
-                    <input className="mtmeta-form-control" type="text" />
+                    <DatePicker
+                        selected={new Date()}
+                        onChange={(date: Date) => { }}
+                        className="mtmeta-form-control"
+                        dateFormat="dd/MM/yyyy"
+                    />
+
                 </div>
             </div>
 
