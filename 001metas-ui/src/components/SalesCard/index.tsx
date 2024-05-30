@@ -24,7 +24,7 @@ function SalesCard() {
                 <div className="mtmeta-form-control-container">
                     <DatePicker
                         selected={minDate}
-                        onChange={(date: Date) => { }}
+                        onChange={(date: Date) => setMinDate(date)}
                         className="mtmeta-form-control"
                         dateFormat="dd/MM/yyyy"
                     />
@@ -33,7 +33,7 @@ function SalesCard() {
                 <div className="mtmeta-form-control-container">
                     <DatePicker
                         selected={maxDate}
-                        onChange={(date: Date) => { }}
+                        onChange={(date: Date) => setMaxDate(date)}
                         className="mtmeta-form-control"
                         dateFormat="dd/MM/yyyy"
                     />
@@ -103,4 +103,4 @@ function SalesCard() {
     )
 }
 
-export default SalesCard
+export default SalesCard;
