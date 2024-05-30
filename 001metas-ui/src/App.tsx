@@ -1,12 +1,17 @@
 import Header from "./components/Header"
-import NotificationButton from "./components/NotificationButton"
+import SalesCard from "./components/SalesCard"
 
 function App() {
   return (
     <>
       <Header />
-      <h1>Olá mundo pra nao dá azar hehehe</h1>
-      <NotificationButton />
+      <main>
+        <section id="sales">
+          <div className="mtmeta-container">
+            <SalesCard />
+          </div>
+        </section>
+      </main>
     </>
 
   )
