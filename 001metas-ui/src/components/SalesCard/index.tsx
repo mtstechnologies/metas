@@ -4,8 +4,16 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import NotificationButton from '../NotificationButton';
 import './styles.css';
+import { useState } from "react";
 
 function SalesCard() {
+
+    
+    //forma de declaracao de estado dentro de um component REACT
+    const [minDate, setMinDate] = useState(new Date());
+    const [maxDate, setMaxDate] = useState(new Date());
+
+
     return (
 
         <div className="mtmeta-card">
@@ -13,7 +21,7 @@ function SalesCard() {
             <div>
                 <div className="mtmeta-form-control-container">
                     <DatePicker
-                        selected={new Date()}
+                        selected={minDate}
                         onChange={(date: Date) => { }}
                         className="mtmeta-form-control"
                         dateFormat="dd/MM/yyyy"
@@ -22,7 +30,7 @@ function SalesCard() {
                 </div>
                 <div className="mtmeta-form-control-container">
                     <DatePicker
-                        selected={new Date()}
+                        selected={maxDate}
                         onChange={(date: Date) => { }}
                         className="mtmeta-form-control"
                         dateFormat="dd/MM/yyyy"
