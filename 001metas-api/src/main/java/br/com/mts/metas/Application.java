@@ -1,4 +1,4 @@
-package br.com.mts._metas_api;
+package br.com.mts.metas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
