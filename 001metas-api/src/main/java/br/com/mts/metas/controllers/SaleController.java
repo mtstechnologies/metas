@@ -1,8 +1,8 @@
 package br.com.mts.metas.controllers;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,8 +18,8 @@ public class SaleController {
 	private SaleService service;
 	
 	@GetMapping
-	public List<Sale> findSales(){
-		return service.findSales();
+	public Page<Sale> findSales(Pageable pageable){
+		return service.findSales(pageable);
 	}
 
 }
