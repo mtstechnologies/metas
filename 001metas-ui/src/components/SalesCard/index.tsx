@@ -6,6 +6,7 @@ import NotificationButton from '../NotificationButton';
 import './styles.css';
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { BASE_URL } from "../../utils/request";
 
 function SalesCard() {
 
@@ -17,7 +18,7 @@ function SalesCard() {
     const [maxDate, setMaxDate] = useState(max);
 
     useEffect(() => {
-        axios.get("http://localhost:8090/sales")
+        axios.get(`${BASE_URL}/sales`)
              .then(response => {
                 console.log(response.data);
              });
